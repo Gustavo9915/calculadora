@@ -15,3 +15,32 @@ function calcular(){
         pantalla.value = `Error`;
     }
 }
+function raiz(){
+    try{
+        pantalla.value = Math.sqrt(pantalla.value);
+    }catch{
+        pantalla.value = `Error`
+    }
+}
+function porcentaje(){
+    try{
+        pantalla.value = pantalla.value / 100;
+    }catch{
+        pantalla.value = `Error`
+    }
+}
+function cuadrado(){
+    try{
+        pantalla.value = Math.pow(pantalla.value, 2);
+    }catch{
+        pantalla.value = `Error`
+    }
+}
+function cubo(){
+    try{
+        pantalla.value = Math.pow(pantalla.value, 3);
+    }catch{
+        pantalla.value = `Error`
+    }
+  
+}
