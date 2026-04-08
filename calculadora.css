@@ -1,21 +1,71 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #1e1e2f;
+  font-family: Arial, sans-serif;
 }
-body{
-    min-height: 100vh;
-    background-color: #232323;
-    display: grid;
-    place-items: center;
+
+/* Contenedor */
+.calculadora {
+  background: #2c2c3e;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
 }
-.calculadora{
-    background-color: #48bfff;
-    color: white;
-    width: 350px;
-    max-width: 100%;
-    padding: 1.5rem;
-    border-radius: 1.5rem;
-    display: grid;
+
+/* Pantalla */
+#pantalla {
+  width: 100%;
+  height: 50px;
+  margin-bottom: 15px;
+  font-size: 1.5em;
+  text-align: right;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background: #fff;
+}
+
+/* Grid de botones */
+.botones {
+  display: grid;
+  grid-template-columns: repeat(4, 60px);
+  gap: 10px;
+}
+
+/* Botones */
+button {
+  height: 60px;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background: #3a3a55;
+  color: white;
+  transition: 0.2s;
+}
+
+/* Hover */
+button:hover {
+  background: #57577a;
+}
+
+/* Botón igual */
+.igual {
+  background: #00b894;
+}
+
+.igual:hover {
+  background: #00d1a0;
+}
+
+/* Botón limpiar */
+.clear {
+  background: #d63031;
+}
+
+.clear:hover {
+  background: #ff4d4d;
 }
