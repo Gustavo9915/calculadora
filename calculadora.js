@@ -102,3 +102,10 @@ function tangente(){
 function agregarPI(){
     pantalla.value += Math.PI
 }
+
+function inverso(){
+    pantalla.value = 1 / pantalla.value;
+}
+function exp(){
+    pantalla.value = Math.exp(pantalla.value);
+}
