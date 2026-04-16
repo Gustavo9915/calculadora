@@ -44,3 +44,34 @@ function cubo(){
     }
   
 }
+
+function ecuacion1(){
+    let a = parseFloat(prompt("Ingresa el valor de A:"));
+    let b = parseFloat(prompt("Ingresa el valor de B:"));
+
+    if (a == 0){
+        pantalla.value = "No es ecuacion";
+        return;
+    }
+
+    let x = -b /a;
+    pantalla.value = "x =" + x;
+}
+
+function ecuacion2(){
+    let a = parseFloat(prompt("Ingresa el valor de A:"));
+    let b = parseFloat(prompt("Ingresa el valor de B:"));
+    let c = parseFloat(prompt("Ingresa el valor de C:"));
+
+    let discriminante = b*b -4*a*c;
+
+    if(discriminante < 0){
+        pantalla.value = "Sin solucion real";
+        return;
+    }
+
+    let x1 = (-b + Math.sqrt(discriminante)) / (2*a);
+    let x2 = (-b + Math.sqrt(discriminante)) / (2*a);
+
+    pantalla.value = `x1=${x1}, x2=${x2}`;
+}
