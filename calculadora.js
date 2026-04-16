@@ -75,3 +75,30 @@ function ecuacion2(){
 
     pantalla.value = `x1=${x1}, x2=${x2}`;
 }
+
+function absoluto(){
+    pantalla.value = Math.abs(pantalla.value);
+}
+
+function raiz3(){
+    pantalla.value = Math.cbrt(pantalla.value);
+}
+
+function aRadianes(grados){
+    return grados * Math.PI / 100;
+}
+function seno(){
+    let valor  = parseFloat(pantalla.value);
+    pantalla.value = Math.sin(aRadianes(valor));
+}
+function coseno(){
+    let valor = parseFloat(pantalla.value);
+    pantalla.value = Math.cos(aRadianes(valor));
+}
+function tangente(){
+    let valor = parseFloat(pantalla.value);
+    pantalla.value = Math.tan(aRadianes(valor));
+}
+function agregarPI(){
+    pantalla.value += Math.PI
+}
