@@ -35,8 +35,9 @@ body {
 /* Grid de botones */
 .botones {
   display: grid;
-  grid-template-columns: repeat(4, 60px);
+  grid-template-columns: repeat(5, 65px);
   gap: 10px;
+  justify-content: center;
 }
 
 /* Botones */
@@ -54,6 +55,9 @@ button {
 /* Hover */
 button:hover {
   background: #57577a;
+}
+button:nth-last-child{
+  grid-column: span 2;
 }
 
 /* Botón igual */
@@ -76,4 +80,10 @@ button:hover {
 .cientifico{
   color: white;
   background: #0984e3;
+}
+.full{
+  grid-column: 1 / -1;
+}
+.ancho2{
+  grid-column: 1 / -1;
 }
