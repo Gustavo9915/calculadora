@@ -109,3 +109,53 @@ function inverso(){
 function exp(){
     pantalla.value = Math.exp(pantalla.value);
 }
+let memoria = 0;
+function guardar(){
+    memoria = parseFloat(pantalla.value);
+}
+
+function recuperar(){
+    memoria.value = memoria;
+}
+
+function limpiarMemoria(){
+    memoria = 0;
+}
+
+function cambiarSigno(){
+    pantalla.value = -pantalla.value
+}
+
+function resolverSistema(metodo){
+    let a1 = parseFloat (prompt("Ecuacion 1 : a"));
+    let b1 = parseFloat(prompt("Ecuacion 1: b"));
+    let c1 = parseFloat(prompt("Ecuacion 1 : c"));
+
+    let a2 = parseFloat (prompt("Ecuacion 2 : a"));
+    let b2 = parseFloat(prompt("Ecuacion 2: b"));
+    let c2 = parseFloat(prompt("Ecuacion 2 : c"));
+
+    let D = a1 * b2 - a2 * b1;
+    if(D == 0){
+        pantalla.value = "sin solucion unica";
+        return;
+    }
+
+    let Dx = c1 * b2 - c2 * b1;
+    let Dy = a1 * c2 - a2 * c1;
+
+    let x = Dx / D
+    let y = Dy / D
+
+    if(metodo === "cramer"){
+        pantalla.value = `cramer → x=${x}, y=${y} `;
+    }
+
+    else if(metodo === sustitucion){
+        pantalla.value = `sustitucion → x=${x} y=${y}`;
+    }
+
+    else if(metodo === igualacion){
+        pantalla.value = `igualacion → x=${x} y=${y}`;
+    }
+}
