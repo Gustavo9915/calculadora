@@ -159,3 +159,35 @@ function resolverSistema(metodo){
         pantalla.value = `igualacion → x=${x} y=${y}`;
     }
 }
+
+function combinacion(){
+    let n = parseInt(prompt("n :"));
+    let r = parseInt(prompt("r :"));
+
+    function fact(x){
+        let res = 1;
+        for( let i = 1; i <= x; i++) res *= i;
+        return res;
+    }
+    pantalla.value = fact(n) / fact(r) * fact(n - r);
+}
+
+function permunacion(){
+    let n = parseInt(prompt("n :"));
+    let r = parseInt(prompt("r :"));
+
+    function fact(x){
+        let res = 1;
+        for( let i = 1; i <= x; i++) res *= i;
+        return res;
+    }
+    pantalla.value = fact(n) / fact(n - r);
+}
+
+function modulo(){
+    let a = parseFloat(prompt("Numero 1:"));
+    let b = parseFloat(prompt("Numero 2:"));
+
+    pantalla.value = a % b;
+}
+

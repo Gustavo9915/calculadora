@@ -87,3 +87,6 @@ button:nth-last-child{
 .ancho2{
   grid-column: 1 / -1;
 }
+.metodo{
+  grid-column: span 1;
+}
