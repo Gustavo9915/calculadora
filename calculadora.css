@@ -90,3 +90,10 @@ button:nth-last-child{
 .metodo{
   grid-column: span 1;
 }
+.redondeo{
+  background: #fdcb6e;
+  color: black;
+}
+.redondeo:hover{
+  background: #ffe08a;
+}

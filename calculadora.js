@@ -190,4 +190,39 @@ function modulo(){
 
     pantalla.value = a % b;
 }
+function redondeo(){
+    let mun = parseFloat(pantalla.value);
 
+    if (isNaN(mun)){
+        pantalla.value = "Error";
+        return;
+    }
+    pantalla.value = Math.round(mun);
+}
+let ultimoResultado = 0;
+function calcular(){
+    try{
+        let res = eval(pantalla.value);
+        ultimoResultado = res;
+        pantalla.value = res; 
+    }catch{
+        pantalla.value = "Error"
+    }
+}
+function usarAns(){
+    pantalla.value += ultimoResultado;
+}
+
+function borrarHistorial(){
+    document.getElementById("historial").innerHTML = "";
+}
+function copiar(){
+    navigator.clipboard.writeText(pantalla.value);
+}
+function toggleSigno(){
+    if (pantalla.value.startsWith("-")){
+        pantalla.value = pantalla.value.slice(1);
+    }else{
+        pantalla.value = "-" + pantalla.value;
+    }
+}
