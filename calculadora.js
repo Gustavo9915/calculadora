@@ -226,3 +226,25 @@ function toggleSigno(){
         pantalla.value = "-" + pantalla.value;
     }
 }
+function terminoGeneral() {
+  let tipo = prompt("Tipo: aritmetica (a) o geometrica (g)");
+  let n = parseInt(prompt("¿Qué término quieres (n)?"));
+
+  if (tipo === "a") {
+    let a1 = parseFloat(prompt("Primer término (a1):"));
+    let d = parseFloat(prompt("Diferencia (d):"));
+
+    let an = a1 + (n - 1) * d;
+    pantalla.value = "a" + n + " = " + an;
+
+  } else if (tipo === "g") {
+    let a1 = parseFloat(prompt("Primer término (a1):"));
+    let r = parseFloat(prompt("Razón (r):"));
+
+    let an = a1 * Math.pow(r, (n - 1));
+    pantalla.value = "a" + n + " = " + an;
+
+  } else {
+    pantalla.value = "Error";
+  }
+}
