@@ -10,10 +10,28 @@ function borrar(){
 }
 function calcular(){
     try{
-        pantalla.value = eval(pantalla.value);
-    }catch(error){
-        pantalla.value = `Error`;
+         let resultado = eval(pantalla.value);
+         pantalla.value = resultado;
+         particulas(e);
+    }catch{
+        pantalla.value = "error"
     }
+}
+let colores = ["#1e1e2f", "#2c2c3e", "#3a3a55", "#222831"];
+let i = 0;
+setInterval(() => {
+    document.body.style.background = colores[i];
+    i = (i + 1) % colores.length;
+}, 3000);
+window.onload = () =>{
+    const calc = document.querySelector(".calcular");
+    calc.style.transform = "scale(0)";
+    calc.style.opacity = "0";
+    setTimeout(() => {
+        calc.style.transition = "0.5s ease";
+        calc.style.transform = "scale(1)";
+        calc.style.opacity = "1";
+    }, 100);
 }
 function raiz(){
     try{
